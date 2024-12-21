@@ -31,5 +31,5 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
-  maven_build:
-    uses: ./.github/workflows/ci.yaml
+  # maven_build:
+  #  uses: ./.github/workflows/ci.yaml
