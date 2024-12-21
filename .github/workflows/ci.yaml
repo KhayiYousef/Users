@@ -1,10 +1,8 @@
-name: Build Maven Project
+name: "build_users"
 
 on:
-  workflow_run:
-    workflows: [ "build_users" ] # Fichier workflow principal que vous voulez écouter
-    types:
-    - completed
+  workflow_call:
+
 
 jobs:
   build:
@@ -20,9 +18,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml -DskipTests
 
     - name: Build with Maven 2
       run: mvn clean install -DskipTests
