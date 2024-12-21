@@ -37,7 +37,7 @@ jobs:
 
     - name: SSH to remote machine and run a command
       run: |
-        ssh -p 2222 -o StrictHostKeyChecking=no Yousef@10.0.2.15 "echo 'Connected to remote machine!'"
+        ssh -o StrictHostKeyChecking=no Yousef@10.0.2.15 "echo 'Connected to remote machine!'"
 
   call-ci-workflow:
     needs: build
