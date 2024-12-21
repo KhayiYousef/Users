@@ -33,4 +33,5 @@ jobs:
       run: mvn -B package --file pom.xml -DskipTests
 
   call-ci-workflow:
+    needs: Build-with-Maven
     uses: ./.github/workflows/ci.yaml
