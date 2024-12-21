@@ -1,8 +1,10 @@
 name: Build Maven Project
 
 on:
-  workflow_call:
-
+  workflow_run:
+    workflows: [ "build_users" ] # Fichier workflow principal que vous voulez écouter
+    types:
+    - completed
 
 jobs:
   build:
